@@ -1,0 +1,118 @@
+body {
+  background-color: var(--px-bg);
+  color: var(--px-text);
+  font-family: $px-font;
+  --bs-body-font-weight: 400;
+  --bs-body-font-size: 1rem;
+  --bs-body-line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ----------------------
+*   owl
+---------------------------*/
+.owl-dots {
+  text-align: center;
+  font-size: 0px;
+  padding-top: 35px;
+
+  .owl-dot {
+    display: inline-block;
+    vertical-align: top;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 1px solid var(--px-text);
+    transition: ease all 0.55s;
+    border-radius: 8px;
+    margin: 0 4px;
+
+    &.active {
+      background: var(--px-theme);
+      width: 20px;
+    }
+  }
+}
+
+.owl-nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  pointer-events: none;
+
+  .owl-next,
+  .owl-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 35px;
+    height: 35px;
+    background: var(--px-theme);
+    color: var(--px-theme-text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    pointer-events: auto;
+    transition: ease all 0.35s;
+
+    &:hover {
+      background: var(--px-theme-text);
+      color: var(--px-theme);
+    }
+  }
+
+  .owl-next {
+    right: 0px;
+
+    @include up-lg {
+      right: -50px;
+    }
+  }
+
+  .owl-prev {
+    left: 0px;
+
+    @include up-lg {
+      left: -50px;
+    }
+  }
+}
+
+
+.wrapper {
+  @include up-lg {
+    padding-left: 285px;
+  }
+}
+
+/* ----------------------
+*  Retutn to Top Section
+---------------------------*/
+#return-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: block;
+  display: none;
+  z-index: 9;
+
+  i {
+    color: var(--px-white);
+    font-size: 40px;
+  }
+}
+
+.fixed-header {
+  #return-to-top {
+    display: block;
+  }
+}

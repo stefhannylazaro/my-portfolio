@@ -1,0 +1,43 @@
+<!-- Mob header -->
+<div class="mob-header">
+  <div class="mob-h-left">
+    <a class="navbar-brand" href="javascript:">
+      <h1>Stefdev</h1>
+    </a>
+  </div>
+  <div class="mob-h-right" (clickOutside)="onClickedOutside($event)">
+    <button class="toggler-menu" [ngClass]="{'open': sidebarOpen}" (click)="toggleMenu()">
+      <span></span>
+    </button>
+  </div>
+</div>
+<!-- End -->
+<!-- Header Top -->
+<div class="header-left-fixed one-page-nav" [ngClass]="{'menu-open menu-open-desk' : sidebarOpen}">
+  <div class="logo">
+    <h1>Stefdev</h1>
+  </div>
+  <ul class="main-menu">
+    <li>
+      <a class="menu-item" spyOn="home" activeClass="active" href="#home" (click)="fullPageScroll('home')">
+        Inicio
+      </a>
+    </li>
+    <li>
+      <a class="menu-item" spyOn="about" activeClass="active" href="#about" (click)="fullPageScroll('about')">
+        Sobre mi
+      </a>
+    </li>
+    <li>
+      <a class="menu-item" spyOn="skill" activeClass="active" href="#skill" (click)="fullPageScroll('skill')">
+        Habilidades
+      </a>
+    </li>
+    <li>
+      <a class="menu-item" spyOn="work" activeClass="active" href="#work" (click)="fullPageScroll('work')">
+        Proyectos
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- End Header Top -->

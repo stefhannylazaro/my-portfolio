@@ -1,0 +1,18 @@
+@import "../../../assets/scss/variable";
+@import "../../../assets/scss/mixin";
+
+.about-section__contact {
+  p {
+    margin: 0 0 15px;
+    font-size: 18px;
+    font-weight: 700;
+
+    @include down-sm {
+      font-size: 16px;
+    }
+
+    span {
+      padding-left: 15px;
+    }
+  }
+}

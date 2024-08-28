@@ -1,0 +1,63 @@
+@import "../../../assets/scss/variable";
+@import "../../../assets/scss/mixin";
+
+.work-section {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .work-img {
+      flex: 0 0 50%;
+      width: 50%;
+      overflow: hidden;
+
+      @include down-sm {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+
+      img {
+        transition: ease all 0.34s;
+        transform: scale(1);
+      }
+    }
+
+    .work-text {
+      flex: 0 0 50%;
+      width: 50%;
+      padding-left: 20px;
+      padding-right: 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include down-sm {
+        flex: 0 0 100%;
+        width: 100%;
+        padding: 12px 0 0;
+      }
+
+      h4 {
+        font-size: 24px;
+
+        @include down-sm {
+          font-size: 18px;
+          margin-bottom: 0;
+        }
+
+        a {
+          color: var(--px-white);
+        }
+      }
+    }
+
+    &:hover {
+      .work-img {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+

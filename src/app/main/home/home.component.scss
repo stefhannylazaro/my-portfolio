@@ -1,0 +1,88 @@
+@import "../../../assets/scss/variable";
+@import "../../../assets/scss/mixin";
+// @import "../../../assets/scss/color";
+
+.home-section {
+  &__block{
+    @include down-md {
+      min-height: auto !important;
+    }
+
+    .hb-me{
+        @include down-md {
+            width: 50%;
+            margin: 0px auto;
+        }
+    }
+    .hb-text {
+        padding: 100px 0;
+        position: relative;
+        z-index: 1;
+        @include down-md {
+          padding-bottom: 40px;
+        }
+        h1 {
+            font-size: 60px;
+            font-weight: 800;
+            color: var(--px-white);
+            line-height: 0.9;
+            margin-bottom: 15px;
+
+            @include down-sm {
+                font-size: 50px;
+                margin-bottom: 15px;
+            }
+            b {
+                font-weight: 800;
+            }
+            span {
+                color: var(--px-theme);
+            }
+        }
+        .lead {
+            font-size: 32px;
+            color: var(--px-white);
+            margin-bottom: 40px;
+            @include down-sm {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            span {
+                font-weight: 800;
+            }
+        }
+        .info-bar {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 60px;
+            p {
+                margin: 0 40px 0 0;
+                font-weight: 600;
+                color: var(--px-white);
+                font-size: 18px;
+                @include down-sm {
+                    font-size: 16px;
+                }
+                span {
+                    padding-left: 8px;
+                }
+            }
+        }
+    }
+
+    .social-link a {
+      margin-right: 15px;
+      color: var(--px-white);
+      font-size: 20px;
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--px-dark);
+      background-color: var(--px-white);
+      border-radius: 50%;
+      transition: ease all 0.35s;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<div class="container work-section">
+  <div class="section-heading">
+    <h2>Proyectos</h2>
+    <p class="mt-2">Aquí encontrarás alguno de mis proyectos personales y profesionales en los cuales he logrado
+      colaborar como parte
+      de mi experiencia laboral.</p>
+  </div>
+  <div class="row gy-5 lightbox-gallery">
+    <div class="col-lg-6" *ngFor="let project of projects">
+      <div class="work-section__list">
+        <div class="work-img">
+          <a [href]="project.link" [target]="project.link === ''? '_self':'_blank'">
+            <img [src]="project.imgSrc" [title]="project.name" [alt]="project.imgAlt">
+          </a>
+        </div>
+        <div class="work-text">
+          <h4>{{ project.name }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
