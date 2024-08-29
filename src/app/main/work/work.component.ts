@@ -62,7 +62,7 @@ export class WorkComponent implements OnInit{
       },
       {
         name: "Task organizer app",
-        link: "#",
+        link: "https://my-day-app.netlify.app/",
         imgSrc: "assets/img/todoapp-web.png",
         imgAlt: "My day app",
       },
