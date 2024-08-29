@@ -12,7 +12,6 @@ import { ExperienceComponent } from './main/experience/experience.component';
 import { WorkComponent } from './main/work/work.component';
 import { SkillComponent } from './main/skill/skill.component';
 import { NgClickOutsideDirective } from 'ng-click-outside2';
-import { ScrollSpyModule } from 'ng-spy';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { ScrollSpyModule } from 'ng-spy';
     RouterModule,
     BrowserAnimationsModule,
     CarouselModule,
-    ScrollSpyModule,
     NgClickOutsideDirective
   ],
   providers: [],

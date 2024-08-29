@@ -1,19 +1,26 @@
-.logo-light {
-	display: none;
-	[data-bs-theme="dark"] & {
-		display: block;
+.mob-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 20px;
+	z-index: 111;
+	transition: all 0s ease;
+  background: var(--px-bg);
+	.fixed-header & {
+		background: var(--px-dark);
+		transition: all 0s ease;
 	}
-}
-
-.logo-dark {
-	display: block;
-	[data-bs-theme="dark"] & {
+	@include up-lg {
 		display: none;
 	}
-}
-
-
-.toggler-menu {
+  @include down-md {
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--bs-gray-600);
+  }
+  .toggler-menu {
     background-color: var(--px-bg);
     color: var(--px-heading);
     border: 1px solid var(--px-gray) !important;
@@ -22,8 +29,8 @@
     line-height: 1;
     position: relative;
     margin-left: 0px;
-	width:50px;
-	height: 30px;
+    width:50px;
+    height: 30px;
     span {
         position: absolute;
         top: 0;
@@ -36,31 +43,10 @@
         height: 0;
 		z-index: 1;
     }
+  }
 }
 
-// Mob Header
-.mob-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	display: flex;
-	justify-content: space-between;
-	padding: 15px 20px;
-	z-index: 111;
-	transition: all 0s ease;
-	.fixed-header & {
-		background: var(--px-dark);
-		transition: all 0s ease;
-	}
-	@include up-lg {
-		display: none;
-	}
-}
-
-
-
-.header-left-fixed {
+.header {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -73,20 +59,20 @@
 	transition: ease all 0.35s;
 	@include down-lg {
 		left: -400px;
-		.logo {
-			opacity: 0;
-		}
 		&.menu-open {
 			left: 0;
 		}
 	}
-	.logo {
+	&__logo {
 		padding: 50px 30px 30px;
     h1 {
       color: var(--px-theme);
     }
+    @include down-lg {
+      opacity: 0;
+    }
 	}
-	.main-menu {
+	&__main-menu {
 		margin: 0;
 		padding: 40px 0 0;
 		list-style: none;
@@ -121,28 +107,6 @@
 					width: 65px;
 				}
 			}
-		}
-	}
-	.social-link {
-		padding: 30px;
-		li {
-			margin-right: 10px;
-		}
-		a {
-			width: 40px;
-			height: 40px;
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-		    color: var(--px-dark);
-		   	background-color: var(--px-white);
-		    border-radius: 50%;
-		    transition: ease all 0.35s;
-		    border: none;
-		    &:hover {
-				color: var(--px-white);
-		   		background-color: var(--px-theme);
-		    }
 		}
 	}
 }

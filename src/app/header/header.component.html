@@ -1,9 +1,7 @@
 <!-- Mob header -->
 <div class="mob-header">
   <div class="mob-h-left">
-    <a class="navbar-brand" href="javascript:">
-      <h1>Stefdev</h1>
-    </a>
+    <h1 class="mb-0">Stefdev</h1>
   </div>
   <div class="mob-h-right" (clickOutside)="onClickedOutside($event)">
     <button class="toggler-menu" [ngClass]="{'open': sidebarOpen}" (click)="toggleMenu()">
@@ -13,28 +11,28 @@
 </div>
 <!-- End -->
 <!-- Header Top -->
-<div class="header-left-fixed one-page-nav" [ngClass]="{'menu-open menu-open-desk' : sidebarOpen}">
-  <div class="logo">
+<div class="header one-page-nav" [ngClass]="{'menu-open menu-open-desk' : sidebarOpen}">
+  <div class="header__logo">
     <h1>Stefdev</h1>
   </div>
-  <ul class="main-menu">
+  <ul class="header__main-menu">
     <li>
-      <a class="menu-item" spyOn="home" activeClass="active" href="#home" (click)="fullPageScroll('home')">
+      <a class="menu-item" activeClass="active" href="#home" (click)="fullPageScroll('home')">
         Inicio
       </a>
     </li>
     <li>
-      <a class="menu-item" spyOn="about" activeClass="active" href="#about" (click)="fullPageScroll('about')">
+      <a class="menu-item" activeClass="active" href="#about" (click)="fullPageScroll('about')">
         Sobre mi
       </a>
     </li>
     <li>
-      <a class="menu-item" spyOn="skill" activeClass="active" href="#skill" (click)="fullPageScroll('skill')">
+      <a class="menu-item" activeClass="active" href="#skill" (click)="fullPageScroll('skill')">
         Habilidades
       </a>
     </li>
     <li>
-      <a class="menu-item" spyOn="work" activeClass="active" href="#work" (click)="fullPageScroll('work')">
+      <a class="menu-item" activeClass="active" href="#work" (click)="fullPageScroll('work')">
         Proyectos
       </a>
     </li>
